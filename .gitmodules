@@ -1,0 +1,6 @@
+[submodule "Backend"]
+	path = Backend
+	url = ../PredictiveEngineMaintenance-Backend.git
+[submodule "Frontend"]
+	path = Frontend
+	url = ../PredictiveEngineMaintenance-Frontend.git

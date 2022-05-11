@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+    backend:
+        image: ghcr.io/temchik00/predictive_engine_maintenance/backend
+    frontend:
+        image: ghcr.io/temchik00/predictive_engine_maintenance/frontend
+    proxy:
+        image: ghcr.io/temchik00/predictive_engine_maintenance/proxy

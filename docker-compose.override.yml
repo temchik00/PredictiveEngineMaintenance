@@ -7,7 +7,7 @@ services:
         environment:
             DATABASE_URL: "postgresql://postgres:password@database:5432/PredictiveMaintenance"
             DEVELOPMENT_MODE: 1
-            SERVER_PORT: 8000
+            SERVER_PORT: 8028
             WINDOW_SIZE: 10
             SEQUENCE_SIZE: 50
             ROOT_PATH: "/api"
@@ -15,20 +15,20 @@ services:
             - database
         restart: on-failure
         ports:
-            - 8000:8000
+            - 8028:8028
     database:
         image: postgres:latest
         environment:
             POSTGRES_PASSWORD: password
             POSTGRES_DB: PredictiveMaintenance
         ports:
-            - 5432:5432
+            - 5438:5432
         volumes:
             - pg_data:/var/lib/postgresql/data
     proxy:
         build: proxy
         ports:
-            - 81:80
+            - 82:80
     frontend:
         build: frontend
 
